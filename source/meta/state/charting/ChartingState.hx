@@ -23,6 +23,7 @@ import flixel.math.FlxMath;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
+import flixel.util.FlxAxes;
 import flixel.util.FlxColor;
 import flixel.util.FlxGradient;
 import gameObjects.*;
@@ -520,7 +521,7 @@ class ChartingState extends MusicBeatState
 
 	private function generateBackground()
 	{
-		coolGrid = new FlxBackdrop(null, 1, 1, true, true, 1, 1);
+		coolGrid = new FlxBackdrop(null, FlxAxes.XY, 1, 1);
 		coolGrid.loadGraphic(Paths.image('UI/forever/base/chart editor/grid'));
 		coolGrid.alpha = (32 / 255);
 		add(coolGrid);
